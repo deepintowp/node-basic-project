@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bucket List</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <style>
+            .btn-secondary:not(:disabled):not(.disabled):active{
+        color: #fff;
+        background-color: #17a2b8;
+        border-color: #b3d7ff;
+    }
+    .btn-secondary {
+        color: #fff;
+        background-color: #17a2b8;
+        border-color: #6c757d;
+    }
+    .bucket-list-item {
+        margin: 20px 0;
+    }
+        </style>
+    </head>
+    <body>
+      <div style="width: 80%; display: block; margin: 0 auto;" >
+        <h1 class="display-4 text-center py-1">My bucket list</h1>
+        
+        <div class="jumbotron p-3 shadow-sm">
+          <form method="POST" action="/create-bucket-list">
+            <div class="d-flex align-items-center">
+              <input  name="bucket_item" autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
+              <button style="background-color: #615122; border-color: #ffc107;" class="btn btn-primary">Add New bucket list</button>
+            </div>
+          </form>
+        </div>
+        
+        <ul class="bucket-list pb-5">
+          <li class="bucket-list-item bucket-list-item-action d-flex align-items-center justify-content-between">
+            <span class="item-text">Sky drive</span>
+            <div>
+              <button class="bucket-list-edit btn btn-secondary btn-sm mr-1">Edit</button>
+              <button class="bucket-list-delete btn btn-danger btn-sm">Delete</button>
+            </div>
+          </li>
+          <li class="bucket-list-item bucket-list-item-action d-flex align-items-center justify-content-between">
+            <span class="item-text">bungee jump #2</span>
+            <div>
+              <button class="bucket-list-edit btn btn-secondary btn-sm mr-1">Edit</button>
+              <button class="bucket-list-delete btn btn-danger btn-sm">Delete</button>
+            </div>
+          </li>
+          <li class="bucket-list-item bucket-list-item-action d-flex align-items-center justify-content-between">
+            <span class="item-text">rock climbing item #3</span>
+            <div>
+              <button class="bucket-list-edit btn btn-secondary btn-sm mr-1">Edit</button>
+              <button class="bucket-list-delete btn btn-danger btn-sm">Delete</button>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+      
+    </body>
+    </html>
